@@ -72,7 +72,7 @@ namespace ofxCv {
     }
     
     void Intrinsics::loadProjectionMatrix(float nearDist, float farDist, cv::Point2d viewportOffset) const {
-        ofViewport(viewportOffset.x, viewportOffset.y, imageSize.width, imageSize.height);
+       // ofViewport(viewportOffset.x, viewportOffset.y, imageSize.width, imageSize.height);
         ofSetMatrixMode(OF_MATRIX_PROJECTION);
         ofLoadIdentityMatrix();
         float w = imageSize.width;

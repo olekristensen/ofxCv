@@ -46,7 +46,10 @@ namespace ofxCv {
 	}
 	
 	void applyMatrix(const ofMatrix4x4& matrix) {
-		glMultMatrixf((GLfloat*) matrix.getPtr());
+        ofMultMatrix(toGlm(matrix));
+        // Old immediate mode stuff
+        // Does not work with programmable renderer
+        // glMultMatrixf((GLfloat*) matrix.getPtr());
 	}
 	
 	int forceOdd(int x) {
